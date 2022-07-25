@@ -3,4 +3,4 @@ db.produtos.updateMany({
   valoresNutricionais: { $elemMatch: { tipo: "sódio", percentual: { $gte: 40 } } },
 }, { $push: { tags: "muito sódio" } });
 // 2. Crie uma query que retorne o nome e tags de todos os documentos.
-db.produtos.find({}, { nome: 1, tags: 1, _id: 0 });
+db.produtos.find({}, { nome: true, tags: true1, _id: false });
