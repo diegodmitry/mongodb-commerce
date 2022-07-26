@@ -1,53 +1,49 @@
-# Boas-vindas ao repositório do projeto MongoDB Commerce!
+# Boas-vindas ao repositório do projeto MongoDB Commerce! 🎲 
 
-Para realizar o projeto, atente-se a cada passo descrito a seguir, e se tiver qualquer dúvida, nos envie por _Slack_! #vqv 🚀
+O modelo relacional é maduro, sólido e bastante difundido. Ele está presente há décadas, suportando milhões de aplicações de todo tipo, e é provável que jamais perca sua relevância. No entanto, como qualquer solução, ele possui suas limitações.
+Essas limitações levaram ao desenvolvimento de outros modelos de bancos de dados que fogem um pouco do modelo relacional. Existem vários tipos de banco de dados NoSQL, cada um com seus prós e contras, e adequado a certos tipos de aplicações e problemas.
+Nos últimos anos, o conhecimento de algum banco de dados NoSQL tem se tornado cada vez mais importante e requisitado pelo mercado. A prática deste projeto me loevou a consolidar conhecimento sobre o MongoDB: o banco de dados NoSQL mais utilizado do mundo. E esse conhecimento irá me ajudar a lidar com uma variedade ainda maior de problemas.
 
-Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir deste repositório, utilizando uma branch específica e um _Pull Request_ para colocar seus códigos.
 
-## Termos e acordos
+Para realizar o projeto, alguns conhecimentos foram aplicados, tais como:
 
-Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta e do Manual da Pessoa Estudante da Trybe.
+* Instalar e conectar-se ao MongoDB via Docker;
+* Inserir documentos no banco de dados usando o `insert()`;
+* Pesquisar documentos no banco de dados usando o `find()`;
+* Utilizar os operadores de comparação ->
+  * $lt (less than, menor que, <)
+  * $lte (less than or equal, menor ou igual a, <=)
+  * $gt (greater than, maior que, >)
+  * $gte (greater than or equal, maior ou igual a, >=)
+  * $eq (equal, igual a, =)
+  * $ne (not equal, diferente de, !=, <>) 
+  * $in (in, dentro de)
+  * $nin (not in, não está dentro de)
+* Utilizar o operador
+  * $exists (exists, verifica a existência de um atributo)
+* Utilizar o método
+  * sort() (sort, ordenar)
+* Remover documentos
+* Utilizar o operador `$elemMatch` para filtrar documentos;
+* Utilizar o operador `$size` para filtrar documentos pelo tamanho de arrays;
+* Utilizar o operador `$expr` para criar expressões de agregação;
+* Utilizar o operador `$mod`;
+* Utilizar o método `updateOne()`;
+* Utilizar o método `updateMany()`;
+* Renomear campos utilizando o operador `$rename`;
+* Remover campos utilizando o operador `$unset`;
+* Incorporar dados aos documentos através de arrays;
+* Utilizar os operadores `$pop`, `$pull` e `$push`;
+* Utilizar o operador `$addToSet`;
+* Utilizar os operadores `$each`, `$slice`.
 
-# Entregáveis
 
-<details>
-  <summary>
-    <strong>🤷🏽‍♀️ Como entregar</strong>
-  </summary><br>
-
-  Para entregar o seu projeto você deverá criar um *Pull Request* neste repositório.
-
-  > Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://app.betrybe.com/course/4d67f5b4-34a6-489f-a205-b6c7dc50fc16/) e nosso [Blog - Git & GitHub](https://blog.betrybe.com/tecnologia/git-e-github/) sempre que precisar!
-
-</details>
-
-<details>
-  <summary>
-    <strong>👨‍💻 O que deverá ser desenvolvido</strong>
-  </summary><br>
-
-  Agora que você já aprendeu **MongoDB**, chegou a hora de praticar todos os conceitos ensinados até aqui por meio do projeto _commerce_!
-
-  Nesse projeto, você vai trabalhar com o banco de dados `commerce`, que contém dados do cardápio do **McDonald's**, como ingredientes, valores nutricionais e dados fictícios de vendas. As instruções de como restaurar o banco podem ser lidas a seguir.
-
-</details>
-
-<details>
-  <summary>
-    <strong>🗓 Data de Entrega</strong>
-  </summary><br>
-  
-  - Este projeto é individual;
-  - Será `1` dia de projeto;
-  - Data de entrega para avaliação final do projeto: `01/08/2022 14:00`.
-
-</details>
 
 # Orientações
 
 <details>
   <summary>
-    <strong>‼️ Antes de começar a desenvolver</strong>
+    <strong>‼️ Antes de começar !!</strong>
   </summary><br>
 
   1. Clone o repositório
@@ -57,244 +53,15 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
   - Entre na pasta do repositório que você acabou de clonar:
     - `cd sd-017-mongodb-commerce`
 
-  2. Crie uma branch a partir da branch `master`
 
-  - Verifique que você está na branch `master`
-    - Exemplo: `git branch`
-    
-  - Se não estiver, mude para a branch `master`
-    - Exemplo: `git checkout master`
-    
-  - Agora crie uma branch na qual você vai submeter os `commits` do seu projeto
-    - Você deve criar uma branch no seguinte formato: `nome-de-usuario-nome-do-projeto`
-    - Exemplo: `git checkout -b seunome-mongodb-commerce`
-
-  3. Para cada exercício você deve criar um novo arquivo JS **dentro de uma pasta na raiz do seu projeto chamada `challenges`** seguindo a seguinte estrutura:
-
-  - desafio1.js, desafio2.js, ..., desafioN.js
-
-  4. Adicione as mudanças ao _stage_ do Git e faça um `commit`
-
-  - Verifique que as mudanças ainda não estão no _stage_
-    - Exemplo: `git status` (deve aparecer o arquivo que você alterou como desafio1.js)
-    
-  - Adicione o novo arquivo ao _stage_ do Git
-    - Exemplo:
-      - `git add .` (adicionando arquivo de solução _challenges/desafio1.js_ para desafio 1)
-      - `git status` (deve aparecer listado o arquivo _challenges/desafio1.js_ em verde)
-      
-  - Faça o `commit` inicial
-    - Exemplo:
-      - `git commit -m 'iniciando o projeto MongoDB Commerce'` (fazendo o primeiro commit)
-      - `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
-
-  5. Adicione a sua branch com o novo `commit` ao repositório remoto
-
-  - Usando o exemplo anterior: `git push -u origin joaozinho-sd-017-mongodb-commerce`
-
-  6. Crie um novo `Pull Request` _(PR)_
-
-  - Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-017-mongodb-commerce/pulls)
-  - Clique no botão verde _"New pull request"_
-  - Clique na caixa de seleção _"Compare"_ e escolha a sua branch
-  - Coloque um título para a sua _Pull Request_
-    - Exemplo: _"Cria tela de busca"_
-  - Clique no botão verde _"Create pull request"_
-  - Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
-  - **Não se preocupe em preencher mais nada por enquanto!**
-  - Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-017-mongodb-commerce/pulls) e confira se o seu _Pull Request_ está criado
-
-</details>
-
-<details>
-  <summary>
-    <strong>⌨️ Durante o desenvolvimento</strong>
-  </summary><br>
-
-  - Faça `commits` das alterações que você realizar no código regularmente;
-
-  - Lembre-se de sempre após um (ou alguns) `commits` atualizar o repositório remoto;
-
-  - Os comandos que você vai utilizar com mais frequência são:
-    1. `git status` _(para verificar o que está em vermelho - fora do stage - e o que está em verde - no stage)_
-    2. `git add` _(para adicionar arquivos ao stage do Git)_
-    3. `git commit` _(para criar um commit com os arquivos que estão no stage do Git)_
-    4. `git push -u nome-da-branch` _(para enviar o commit para o repositório remoto na primeira vez que fizer o `push` de uma nova branch)_
-    5. `git push` _(para enviar o commit para o repositório remoto após o passo anterior)_
-
-</details>
-
-<details>
-  <summary>
-    <strong>🤝 Depois de terminar o desenvolvimento (opcional)</strong>
-  </summary><br>
-
-  Para sinalizar que o seu projeto está pronto para _"Code Review"_, faça o seguinte:
-
-  - Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas:
-
-    - No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**;
-
-    - No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**;
-
-    - No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-017`.
-
-  Caso tenha alguma dúvida, [aqui tem um video explicativo](https://vimeo.com/362189205).
-
-</details>
-
-<details>
-  <summary>
-    <strong>🕵🏿 Revisando um pull request</strong>
-  </summary><br>
-
-  Use o conteúdo sobre [Code Review](https://app.betrybe.com/course/real-life-engineer/code-review) para te ajudar a revisar os _Pull Requests_.
-
-</details>
-
-<details>
-  <summary>
-    <strong>🎛 Linter</strong>
-  </summary><br>
-
-  Para fazer a análise estática do seu código neste projeto, vamos utilizar o linter [ESLint](https://eslint.org/). Assim o código estará alinhado com as boas práticas de desenvolvimento, sendo mais legível e de fácil manutenção!
-
-  ➡️ Este projeto já vem com as dependências relacionadas ao _linter_ configuradas no arquivo `package.json`.
-
-  ➡️ Para poder rodar o `ESLint` basta:
-
-  - Executar o comando `npm install` dentro do projeto e depois `npm run lint`.
-
-  - Se a análise do `ESLint` encontrar problemas no seu código, eles serão mostrados no seu terminal. 
-  - Se não houver problema no seu código, nada será impresso no seu terminal.
-
-  - Você pode também instalar o plugin do `ESLint` no `VSCode`. Para isso, bastar ir em extensions e baixar o [plugin `ESLint`](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
-
-  ⚠️ **Importante**: Pull Requests com issues de Linter não serão avaliadas. Atente-se para resolvê-las antes de finalizar o desenvolvimento.
-
-</details>
-
-<details>
-  <summary>
-    <strong>🛠 Testes</strong>
-  </summary><br>
-
-  - Para executar localmente os testes, é preciso estar na raiz do diretório do projeto e escrever o seguinte no seu terminal,:
+  2. Execute localmente os testes, é preciso estar na raiz do diretório do projeto e escrever o seguinte no seu terminal,:
 
   ```sh
   ./scripts/evaluate.sh
   ```
 
-  👀 **De olho na dica**: esse script vai imprimir um relatório indicando se o teste passou ou não para cada desafio. Como a execução do script envolve restauração da base de dados `commerce` de um teste para outro, recomenda-se esperar pela sua execução completa.
-
-  - Para executar somente o teste de um desafio, execute o comando abaixo substituindo N pelo número do desafio
-
-  ```sh
-  ./scripts/evaluate.sh desafioN
-  ```
-
-  ⚠️**Importante**: como o banco de dados `commerce` é restaurado de um teste para outro durante a avaliação, **sempre use o banco restaurado na hora de fazer um desafio**. Veja a orientação ➡️ ♻️ Restaurando o banco de dados `commerce`.
-
-  ⚠️ **Importante**: o avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?
-
 </details>
 
-<details>
-  <summary>
-    <strong>🐳 Como usar o Docker para este projeto</strong>
-  </summary><br>
-
-  - Para quem não possui o MongoDB instalado e está utilizando o docker, é necessário executar os testes localmente usando os seguintes passos:
-
-  1. Acesse o terminal na raiz da pasta do projeto;
-  2. Crie um container com um volume apontando para a pasta do projeto `docker run -d --name=nomeDoContainer -v "$PWD:/app" -p 27017:27017 mongo`;
-  3. Com o container em execução, acesse o terminal do container `docker exec -it nomeDoContainer bash`;
-  4. No terminal do container acesse o diretório mapeado no volume (no exemplo acima `/app`);
-  5. Por fim, execute o script de testes do projeto: `./scripts/evaluate.sh`.
-  Se por algum motivo a execução do container for finalizada, basta iniciá-lo novamente com o comando `docker start nomeDoContainer` e seguir a partir do passo 3.
-
-</details>
-
-<details>
-  <summary>
-    <strong>♻️ Restaurando o banco de dados `commerce`</strong>
-  </summary><br>
-
-  1. Abra o terminal e conecte-se à sua instância local do **MongoDB**. Se você receber uma mensagem de erro como **_Connection refused_**, tente reiniciar sua instância [seguindo as orientações desse link](https://app.betrybe.com/course/d396e5a2-d5c9-4f3a-b723-1a1d3ea06b3d).
-
-  2. Quando sua instância estiver no ar e você estiver conectado a ela, digite `exit`. Com isso, você voltará ao terminal para iniciar a importação dos dados.
-
-  3. Na raiz do diretório do projeto, execute o seguinte comando para restaurar a base de dados `commerce`:
-    ```sh
-    DBNAME=commerce ./scripts/resetdb.sh assets/produtos
-    ```
-
-  - A execução desse script criará um banco de dados chamado `commerce` e importará os dados para a coleção `produtos`.
-
-  ⚠️ **Importante**: tanto o script executado anteriormente quanto o script de execução local dos testes, restauram a base de dados `commerce`, portanto sempre salve seu progresso nos arquivos de desafio! Veja a orientação ➡️ 🛠 Testes ⚠️
-
-</details>
-
-<details>
-  <summary>
-    <strong>👷 Estruturação do projeto</strong>
-  </summary><br>
-
-  - ⚠ **Crie todos os arquivos dentro da pasta `challenges`** ⚠
-
-  Esse projeto possui uma série de desafios com diferentes níveis de complexidade. Cada desafio deve ser resolvido em seu arquivo próprio. Para isso:
-
-  1. Leia o comando e crie o diretório `challenges` com um arquivo chamado `desafioN.js`, em que N é o número do desafio.
-
-  2. O arquivo `desafioN.js` deve conter apenas o código MQL (_Mongo Query Language_) do desafio resolvido. **Lembre-se sempre de incluir o ponto e vírgula (";") no final de suas queries**, como no exemplo a seguir:
-
-  ```js
-  db.produtos.find();
-  ```
-
-  3. Siga as orientações do passo anterior até finalizar todos os desafios e depois siga as instruções de como entregar o projeto, contidas na Orientação ➡️ 🤝 Depois de terminar o desenvolvimento (OPCIONAL).
-
-  4. Para entregar o seu projeto você deve criar um _Pull Request_ neste repositório. Este _Pull Request_ deve conter os arquivos `desafio1.js`, `desafio2.js` e assim sucessivamente até o `desafio32.js`, no diretório `challenges`, que terá o código `MQL` de cada desafio, respectivamente.
-
-  > **Caso você opte por não utilizar Docker para realizar os testes na sua máquina local**, é necessário que o clone do projeto seja realizado fora do diretório com nome `Área de Trabalho`. Isso quer dizer que, `Área de Trabalho` não pode estar no caminho do diretório onde o projeto foi clonado, pois o script que realiza os testes não consegue "encontrar" pastas que contenham espaços em seus nomes. Para checar se seu projeto está seguindo esse passo corretamente, utilize o comando `pwd` no terminal.
-
-  ⚠️ **Restrições** ⚠️:
-
-  - **Não use aspas simples para especificar campos e/ou valores**: quando for necessário usar aspas, use somente aspas duplas;
-
-  - **Não use o comando `use commerce`**, pois os testes já se conectam automaticamente à base `commerce`.
-  
-  - **Todos os seus arquivos devem conter os nomes especificados aqui**:
-
-  ```sh
-  ./challenges/desafio1.js
-  ./challenges/desafio2.js
-  ./challenges/desafio{...}.js
-  ./challenges/desafio31.js
-  ./challenges/desafio32.js
-  ```
-
-</details>
-
-<details>
-  <summary>
-    <strong>🗣 Nos dê feedbacks sobre o projeto!</strong>
-  </summary><br>
-
-  Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário. **Leva menos de 3 minutos!**
-
-  Link: [Formulário de avaliação do projeto](https://be-trybe.typeform.com/to/ZTeR4IbH)
-
-</details>
-
-<details>
-  <summary>
-    <strong>🗂 Compartilhe seu portfólio!</strong>
-  </summary><br>
-
-  Você sabia que o LinkedIn é a principal rede social profissional e compartilhar o seu aprendizado lá é muito importante para quem deseja construir uma carreira de sucesso? Compartilhe esse projeto no seu LinkedIn, marque o perfil da Trybe (@trybe) e mostre para a sua rede toda a sua evolução.
-
-</details>
 
 # Requisitos
 
@@ -362,8 +129,6 @@ Para isso, escreva no arquivo `desafio13.js` duas queries, **nesta ordem**:
 
 - Para isso, escreva a query no arquivo `desafio14.js`
 - Sua query deve retornar apenas os campos `nome`, `ingredientes` e `valoresNutricionais`.
-
-👀**De olho na dica**: para realizar esse requisito, explore a implementação do `$slice`através do conteúdo [desse link](https://app.betrybe.com/course/back-end/introducao-ao-mongodb/updates-complexos-arrays/e58a3ec0-3a24-4d96-97f1-bfeec6d1b253/conteudos/bc2f5c46-bbeb-4fff-9d79-cebb2c00769b/operador-push/6943fddb-86aa-498c-b675-429487b9bcf3?use_case=side_bar) 
 
 ### 15 - Adicione o campo `avaliacao` em todos os documentos da coleção e efetue alterações nesse campo
 
